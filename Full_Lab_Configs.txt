@@ -1,0 +1,59 @@
+! =========================================================
+! PROJECT: Cisco Enterprise Network Lab
+! DEVICE: Router0 (Cisco 2911)
+! =========================================================
+hostname Router0
+
+! --- Inter-VLAN Routing (Router-on-a-Stick) ---
+interface GigabitEthernet0/0.10
+ description Management VLAN
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0.20
+ description Staff VLAN
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+
+! --- OSPF Dynamic Routing ---
+router ospf 1
+ router-id 1.1.1.1
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+
+! --- Secure Management ---
+username admin privilege 15 secret cisco123
+line vty 0 4
+ transport input ssh
+ login local
+!
+
+! =========================================================
+! DEVICE: Switch0 (Cisco 2960)
+! =========================================================
+hostname Switch0
+
+! --- VLAN Database ---
+vlan 10
+ name Management
+vlan 20
+ name Staff
+
+! --- Layer 2 Security (Port Security) ---
+interface range FastEthernet0/1 - 10
+ switchport mode access
+ switchport access vlan 20
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security violation shutdown
+ switchport port-security mac-address sticky
+
+! --- Trunking to Router ---
+interface GigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+
+! --- EtherChannel Configuration (LACP) ---
+interface range FastEthernet0/23 - 24
+ channel-group 1 mode active
+!

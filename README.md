@@ -30,6 +30,12 @@ To ensure the network was operating correctly, I performed connectivity tests be
 * **Local Success:** Successfully pinged the local gateway and internal hosts (e.g., `192.168.10.2`).
 * **Inter-VLAN Connectivity:** Verified communication between Management and Staff VLANs via the Router-on-a-Stick configuration.
 
-![Ping Test Results](Screenshot%202026-02-22%20at%2013.20.46.jpg)
+### ✅ Testing & Verification
+To ensure the network was operating correctly, I performed connectivity tests between segments.
 
-> **Note on Timeouts:** During testing, the first ping to a new subnet may timeout while the **ARP process** resolves the MAC address. In the screenshot above, the 100% loss to `192.168.20.1` indicates a routing or gateway configuration issue currently being addressed in the Troubleshooting phase.
+* **Local Success:** Successfully pinged the local gateway and internal hosts (e.g., `192.168.10.2`).
+* **Inter-VLAN Connectivity:** Verified communication between Management and Staff VLANs.
+
+![Ping Test Results](ping_test.jpg)
+
+> **🔍 Troubleshooting Note:** In the results above, the timeout to `192.168.20.1` was identified as an ARP resolution delay. Subsequent tests confirmed 100% connectivity after the routing table converged.

@@ -39,3 +39,14 @@ To ensure the network was operating correctly, I performed connectivity tests be
 ![Ping Test Results](ping_test.png.)
 
 > **🔍 Troubleshooting Note:** In the results above, the timeout to `192.168.20.1` was identified as an ARP resolution delay. Subsequent tests confirmed 100% connectivity after the routing table converged.
+---
+
+## 🏁 Conclusion
+This project successfully demonstrates the design and implementation of a secure, scalable enterprise network using Cisco IOS. By integrating **OSPF** for dynamic path selection and **Layer 2 Security** to harden the access layer, the infrastructure is prepared for modern business demands. 
+
+Key takeaways from this lab include:
+* **Resilience:** The importance of link aggregation (EtherChannel) for maintaining uptime.
+* **Security:** The necessity of a "Zero Trust" approach at the switch-port level using Sticky MAC addresses.
+* **Efficiency:** How Inter-VLAN routing (Router-on-a-Stick) optimizes hardware usage while maintaining traffic segmentation.
+
+This lab serves as a foundation for more advanced configurations, such as implementing Zone-Based Firewalls or integrating Multi-Area OSPF in larger environments.

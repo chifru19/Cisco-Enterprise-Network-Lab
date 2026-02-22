@@ -24,3 +24,12 @@ During this lab, we explored **EtherChannel (LACP/PAgP)** implementation. While 
 
 ### 📂 Project Files
 * **[Full_Lab_Configs.txt](./Full_Lab_Configs.txt):** Contains the complete running configurations for both Router0 and Switch0.
+### ✅ Testing & Verification
+To ensure the network was operating correctly, I performed connectivity tests between segments.
+
+* **Local Success:** Successfully pinged the local gateway and internal hosts (e.g., `192.168.10.2`).
+* **Inter-VLAN Connectivity:** Verified communication between Management and Staff VLANs via the Router-on-a-Stick configuration.
+
+![Ping Test Results](Screenshot%202026-02-22%20at%2013.20.46.jpg)
+
+> **Note on Timeouts:** During testing, the first ping to a new subnet may timeout while the **ARP process** resolves the MAC address. In the screenshot above, the 100% loss to `192.168.20.1` indicates a routing or gateway configuration issue currently being addressed in the Troubleshooting phase.

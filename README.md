@@ -36,6 +36,6 @@ To ensure the network was operating correctly, I performed connectivity tests be
 * **Local Success:** Successfully pinged the local gateway and internal hosts (e.g., `192.168.10.2`).
 * **Inter-VLAN Connectivity:** Verified communication between Management and Staff VLANs.
 
-![Ping Test Results](ping_test.jpg)
+![Ping Test Results](ping_test.png.)
 
 > **🔍 Troubleshooting Note:** In the results above, the timeout to `192.168.20.1` was identified as an ARP resolution delay. Subsequent tests confirmed 100% connectivity after the routing table converged.

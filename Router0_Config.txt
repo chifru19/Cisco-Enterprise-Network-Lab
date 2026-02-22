@@ -1,0 +1,24 @@
+! --- Router0 Configuration ---
+hostname Router0
+
+! Sub-interfaces for Inter-VLAN Routing (ROAS)
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+
+! OSPF Dynamic Routing
+router ospf 1
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+ log-adjacency-changes
+
+! Secure Management
+ip ssh version 2
+line vty 0 4
+ transport input ssh
+ login local
+!

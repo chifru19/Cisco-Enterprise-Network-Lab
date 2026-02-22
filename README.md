@@ -1,7 +1,4 @@
-### 🎓 Skills Learned
-* **Network Architecture:** Understanding the differences between Client-Server and Peer-to-Peer (P2P) environments.
 
-![Network Architectures](network_types.jpg)
 ### 🎓 Skills Learned: Network Models
 I have demonstrated an understanding of different network architectures, specifically how they apply to enterprise environments.
 

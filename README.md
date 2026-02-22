@@ -2,8 +2,17 @@
 * **Network Architecture:** Understanding the differences between Client-Server and Peer-to-Peer (P2P) environments.
 
 ![Network Architectures](network_types.jpg)
+### 🎓 Skills Learned: Network Models
+I have demonstrated an understanding of different network architectures, specifically how they apply to enterprise environments.
 
-* **Advanced CLI Proficiency:** Expert navigation of Cisco IOS for device configuration...
+| Feature | Client-Server | Peer-to-Peer (P2P) |
+| :--- | :--- | :--- |
+| **Control** | Centralized | Decentralized |
+| **Management** | Professional Admin required | User-managed |
+| **Cost** | High initial setup | Low cost |
+| **Best For** | Enterprise/Businesses | Home/Small Office |
+
+![Network Architectures](network_types.jpg)* **Advanced CLI Proficiency:** Expert navigation of Cisco IOS for device configuration...
 # Cisco Enterprise Network Lab
 
 A comprehensive Cisco Packet Tracer implementation featuring dynamic routing, secure VLAN management, and hardened Layer 2 security.

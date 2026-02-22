@@ -14,3 +14,4 @@ During this lab, we explored **EtherChannel (LACP/PAgP)** implementation. While 
 
 ## 📊 Topology
 ![Network Topology](./Screenshot 2026-02-22 at 11.55.40.jpg)
+![Final Working Topology](./Screenshot 2026-02-22 at 11.55.40.jpg)
